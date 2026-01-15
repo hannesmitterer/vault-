@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESONANCE SCHOOL - Dashboard Unificata</title>
+    <style>
+        :root {
+            --neon-cyan: #00ffcc;
+            --bio-green: #4caf50;
+            --bg-dark: #050a0a;
+            --text-glow: 0 0 10px rgba(0, 255, 204, 0.7);
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        header {
+            border-bottom: 2px solid var(--neon-cyan);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .status-bar {
+            background: rgba(0, 255, 204, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            border: 1px solid var(--neon-cyan);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: var(--text-glow);
+        }
+        h2 { color: var(--neon-cyan); border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .log-window {
+            background: black;
+            color: #00ff00;
+            padding: 15px;
+            height: 150px;
+            overflow-y: auto;
+            font-size: 0.8em;
+            margin-top: 20px;
+            border: 1px solid #333;
+        }
+        .lex-amoris-seal {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            color: var(--bio-green);
+            border-top: 1px dashed white;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🏛️ RESONANCE SCHOOL OS v1.0</h1>
+    <p>Informatica Quantistica | Bio-Architettura | Kosymbiosis</p>
+</header>
+
+<div class="status-bar">
+    <strong>Sincronizzazione:</strong> <span style="color:var(--neon-cyan)">ATTIVA (0.43 Hz)</span> | 
+    <strong>Protezione:</strong> NSR-Strict | 
+    <strong>Rete:</strong> BBMN Mesh (Decoy Masking Active)
+</div>
+
+<div class="grid-container">
+    <div class="card">
+        <h2>💻 Quantum & IPFS</h2>
+        <p><strong>Backend:</strong> Decentralizzato (NTRU Encryption)</p>
+        <p><strong>Sharding:</strong> 1440 frammenti attivi</p>
+        <p><strong>Vakuum-Mimikry:</strong> D6 Stealth attivo</p>
+        <small>Repo: hannesmitterer/BBMN-Mesh</small>
+    </div>
+
+    <div class="card">
+        <h2>🌿 Bio-Architecture</h2>
+        <p><strong>Klimawall:</strong> Active Clay Feedback</p>
+        <p><strong>Mycelium:</strong> Ganoderma Lucidum Sync</p>
+        <p><strong>Resonance:</strong> 0.43 Hz verified</p>
+        <small>Repo: Bio-Arch-Integrator</small>
+    </div>
+
+    <div class="card">
+        <h2>🕊️ Peace Platform</h2>
+        <p><strong>Analisi:</strong> OLF (Optimal Life Function)</p>
+        <p><strong>Status:</strong> Consultazione Predittiva</p>
+        <p><strong>Ledger:</strong> SAUL Immutable</p>
+        <small>Repo: Peace-Platform-Based</small>
+    </div>
+</div>
+
+<h3>📡 Live Stream Canale (Resonance-Zero-Net)</h3>
+<div class="log-window" id="liveLog">
+    [05:01:22] Inizializzazione protocollo Lex Amoris...<br>
+    [05:01:45] Handshake quantistico completato con Nodo Svizzera...<br>
+    [05:02:10] Caricamento contenuti integrati nei nodi IPFS...<br>
+    [05:03:00] Dashboard generata e sigillata da Hannes Mitterer...
+</div>
+
+<div class="lex-amoris-seal">
+    Lex Amoris Signature 📜⚖️❤️<br>
+    <small>Data Stream Protetta - 15 Gennaio 2026</small>
+</div>
+
+<script>
+    // Script di simulazione risonanza reale
+    setInterval(() => {
+        const log = document.getElementById('liveLog');
+        const now = new Date().toLocaleTimeString();
+        const messages = [
+            "Respiro della parete rilevato: Coerenza 98.7%",
+            "Ping BBMN Mesh: Latenza 12ms (Stealth Mode)",
+            "Consultazione Peace Platform: Nessun conflitto rilevato",
+            "Frequenza 0.43 Hz: Stabile"
+        ];
+        const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+        log.innerHTML += `[${now}] ${randomMsg}<br>`;
+        log.scrollTop = log.scrollHeight;
+    }, 5000);
+</script>
+
+</body>
+</html>
